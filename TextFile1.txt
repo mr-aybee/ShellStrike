@@ -1,0 +1,13 @@
+net.tcp://localhost:9900/ShellData
+
+
+New-Service -Name "XC-ShellStrike" -BinaryPathName "C:\coldstrike\ShellStrike\ShellStrikeService.exe"
+
+C:\putty\plink.exe
+
+
+
+Data Source=ISB-SSO-DB1;Failover Partner=LHE-SSO-DB1;Initial Catalog=dBColdStrike;User ID=ssoadmin;Password=XM_on-26tcoinspiron
+
+
+INTSSOUR@10.12.33.119's password: 

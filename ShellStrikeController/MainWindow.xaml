@@ -1,0 +1,62 @@
+﻿<Window x:Class="ShellStrikeController.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShellStrikeController"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="810" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="9*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"></Image>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="311*"/>
+                    <ColumnDefinition Width="412*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblStatus" Content="" HorizontalAlignment="Left" Height="26" Margin="4,4,0,0" VerticalAlignment="Top" Width="196" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="0,0,0,1"/>
+                <Label x:Name="lblServiceStartTime" Content="" HorizontalAlignment="Left" Height="26" Margin="5,37,0,0" VerticalAlignment="Top" Width="196" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="0,0,0,1"/>
+                <Label x:Name="lblThreadStatus" Content="" HorizontalAlignment="Left" Height="26" Margin="204,4,0,0" VerticalAlignment="Top" Width="196" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="0,0,0,1" Grid.ColumnSpan="2"/>
+                <Label x:Name="lblNodesExecuted" Content="" HorizontalAlignment="Left" Height="26" Margin="205,37,0,0" VerticalAlignment="Top" Width="196" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="0,0,0,1" Grid.ColumnSpan="2"/>
+                <Button x:Name="btnExecuteNode" Style="{StaticResource PrimaryButtonStyle}" Content="Execute Node" HorizontalAlignment="Left" Height="21" Margin="134.5,19,0,0" VerticalAlignment="Top" Width="133" Grid.Column="1" Click="btnExecuteNode_Click"/>
+                <Button x:Name="btnServiceSettings" Style="{StaticResource PrimaryButtonStyle}" Content="Service Settings" HorizontalAlignment="Left" Height="21" Margin="135.5,43,0,0" VerticalAlignment="Top" Width="133" Click="btnServiceSettings_Click" Grid.Column="1"/>
+                <Button x:Name="btnConnect" Style="{StaticResource PrimaryButtonStyle}" Content="Connect" HorizontalAlignment="Left" Height="20" Margin="309.5,18,0,0" VerticalAlignment="Top" Width="87" Click="btnConnect_Click" Grid.Column="1"/>
+                <TextBox x:Name="txtSearch" BorderBrush="{StaticResource PrimaryBrush}" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="281,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="121" KeyDown="txtSearch_KeyDown"/>
+
+            </Grid>
+        </Grid>
+        <Border Grid.Row="1" Margin="5" BorderBrush="{StaticResource PrimaryBrush}" BorderThickness="1">
+            <DataGrid MinColumnWidth="130" Name="gridExecList" CellStyle="{StaticResource ColumnCellStyle}" ColumnHeaderStyle="{StaticResource ColumnHeaderStyle}">
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Name="gridClear"  Click="gridClear_Click">Clear</MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="1*" Header="Execution Code" Binding="{Binding Path=ExecutionCode, Mode=OneWay}"  />
+                    <DataGridTextColumn Width="1*" Header="CIName" Binding="{Binding Path=CIName, Mode=OneWay}"  />
+                    <DataGridTextColumn Width="1*" Header="AccountName" Binding="{Binding Path=AccountName, Mode=OneWay}"  />
+                    <DataGridTextColumn Width="1*" Header="ExecutionType" Binding="{Binding Path=ExecutionType, Mode=OneWay}"  />
+                    <DataGridTextColumn Width="1*" Header="ExecutionTime" Binding="{Binding Path=EndTime, Mode=OneWay}"  />
+                    <DataGridTemplateColumn Width="1*" Header="" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="RowButton" Click="RowButton_Click" >Show</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </Border>
+    </Grid>
+</Window>

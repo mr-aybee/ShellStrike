@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="FontAwesome">/fonts/fontawesome-webfont.ttf#FontAwesome</FontFamily>
+    <FontFamily x:Key="FontAwesomeSolid">/fonts/fontawesome-solid.ttf#FontAwesome</FontFamily>
+    <FontFamily x:Key="FontAwesomeBrandRegular">/fonts/fontawesome-free-5.15.3-desktop/otfs/font awesome 5 brands-regular-400.otf</FontFamily>
+    <!--<FontFamily x:Key="FontAwesome">/fonts/fontawesome-webfont.ttf#FontAwesome</FontFamily>-->
+</ResourceDictionary>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="ShellStrikeController.NodeListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShellStrikeController"
+        mc:Ignorable="d"
+        Title="NodeListWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Grid.Row="1" Grid.Column="1" Margin="2" MinColumnWidth="110" Name="gridExecList" CellStyle="{StaticResource ColumnCellStyle}" ColumnHeaderStyle="{StaticResource ColumnHeaderStyle}" MouseDoubleClick="gridExecList_MouseDoubleClick" >
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Name="gridRefresh"  Click="btnRefeshAll_Click">Refresh</MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="1*"  MinWidth="50" Header="ID" Binding="{Binding Path=ID, Mode=OneWay}"  />
+                <DataGridTextColumn Width="1*" Header="CIName" Binding="{Binding Path=CIName, Mode=OneWay}" />
+                <DataGridTextColumn Width="1*" Header="AccountName" Binding="{Binding Path=AccountName, Mode=OneWay}" />
+                <DataGridTextColumn Width="1*" MinWidth="50" Header="Ping" Binding="{Binding Path=Ping, Mode=OneWay}"/>
+                <DataGridTextColumn Width="1*" MinWidth="50" Header="Telnet" Binding="{Binding Path=Telnet, Mode=OneWay}" />
+                <DataGridTextColumn Width="1*" Header="Connectivity" Binding="{Binding Path=Connectivity, Mode=OneWay}" />
+                <DataGridTextColumn Width="1*" MinWidth="50" Header="Login" Binding="{Binding Path=Login, Mode=OneWay}" />
+                <DataGridTextColumn Width="1*" Header="MonitorTime" Binding="{Binding Path=MonitorTime, Mode=OneWay}" />
+                <DataGridTemplateColumn Width="1*" Header="Click" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="RowButton" Click="RowButton_Click">Refresh</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="searchTxt" BorderBrush="{StaticResource PrimaryBrush}" Grid.Column="1" Height="20" Margin="515,29,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="195" KeyDown="searchTxt_KeyDown"/>
+        <Label Content="Nodes" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="4,26,0,0" VerticalAlignment="Top" Width="75"/>
+    </Grid>
+</Window>

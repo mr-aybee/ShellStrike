@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ShellStrikeService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PlinkPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\putty\plink.exe</Value>
+    </Setting>
+    <Setting Name="ThreadLimit" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="ShellTCPBinding" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://localhost:9900/ShellData</Value>
+    </Setting>
+    <Setting Name="FetchInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60000</Value>
+    </Setting>
+    <Setting Name="CommandEndTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">15000</Value>
+    </Setting>
+    <Setting Name="DoOutputLogs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DoRawOutputLogs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DoProcessLogs" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ThreadMaxTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60000</Value>
+    </Setting>
+    <Setting Name="OutputRetryAttemps" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="dBColdStrikeConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=ISB-SSO-DB1;Failover Partner=LHE-SSO-DB1;Initial Catalog=dBColdStrike;User ID=ssoadmin;Password=XM_on-26tcoinspiron</Value>
+    </Setting>
+    <Setting Name="CommandWait" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

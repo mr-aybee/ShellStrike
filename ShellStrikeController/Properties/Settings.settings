@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ShellStrikeController.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ShellTCPBinding" Type="System.String" Scope="User">
+      <Value Profile="(Default)">net.tcp://10.200.209.196:9900/ShellData</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
