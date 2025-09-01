@@ -7,7 +7,7 @@ C:\putty\plink.exe
 
 
 
-Data Source=ISB-SSO-DB1;Failover Partner=LHE-SSO-DB1;Initial Catalog=dBColdStrike;User ID=ssoadmin;Password=XM_on-26tcoinspiron
+Data Source=ISB-SSO-DB1;Failover Partner=LHE-SSO-DB1;Initial Catalog=dBColdStrike;User ID=ssoadmin;Password=***
 
 
 INTSSOUR@10.12.33.119's password: 
